@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+<div class="container">
+  <header th:replace="fragments/header :: header"></header>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <div class="jumbotron">
+        <h3 class="display-5">Привет, @username!</h3>
+        <p class="lead">На freeDuringCovid19.by ты найдешь десятки сервисов, которые открыли бесплатный доступ к своим
+          ресурсам из-за пандемии коронавируса.</p>
+        <p>Переживи пандемию с пользой или, как минимум, без скуки!</p>
+        <hr class="my-3">
+        <p>Если знаешь ресурс, который стал бесплатным, но его нет в этом списке, напиши мне. Я его промодерирую и
+          добавлю.
+        </p>
+        <a class="btn-floating btn-tw btn-email" type="button" role="button"><i class="fas fa-envelope"></i></a>
+        <a class="btn-floating btn-tw btn-ins" type="button" role="button"><i class="fab fa-instagram"></i></a>
+        <a class="btn-floating btn-tw btn-fb" type="button" role="button"><i class="fab fa-facebook-f"></i></a>
+        <a class="btn-floating btn-tw btn-vk" type="button" role="button"><i class="fab fa-vk"></i></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <h4>
+        <span class="badge badge-warning">Недавно добавленные</span>
+      </h4>
+      <p>
+    </div>
+  </div>
+
+  <div class="card-deck">
+    <div class="card mb-4">
+      <span class="badge badge-warning">Кино</span>
+      <div class="view overlay">
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
+             alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Кинопоиск</h4>
+        <p class="card-text">Фильмы в HD</p>
+        <button type="button" class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</button>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <span class="badge badge-warning">Образование</span>
+      <div class="view overlay">
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
+             alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Юнити</h4>
+        <p class="card-text">Курсы по шейдерам</p>
+        <button type="button" class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</button>
+      </div>
+    </div>
+    <div class="card mb-4">
+      <span class="badge badge-warning">Музыка</span>
+      <div class="view overlay">
+        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
+             alt="Card image cap">
+        <a href="#!">
+          <div class="mask rgba-white-slight"></div>
+        </a>
+      </div>
+      <div class="card-body">
+        <h4 class="card-title">Яндекс музыка</h4>
+        <p class="card-text">Музыкальный сервис</p>
+        <button type="button" class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</button>
+      </div>
+    </div>
+  </div>
+  <footer th:replace="fragments/footer :: footer"></footer>
+</div>
+</body>
+</html>
