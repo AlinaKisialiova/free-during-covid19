@@ -34,50 +34,22 @@
     </div>
   </div>
 
-  <div class="card-deck">
-    <div class="card mb-4">
-      <span class="badge badge-warning">Кино</span>
-      <div class="view overlay">
-        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg"
-             alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Кинопоиск</h4>
-        <p class="card-text">Фильмы в HD</p>
-        <button type="button" class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</button>
-      </div>
-    </div>
-    <div class="card mb-4">
-      <span class="badge badge-warning">Образование</span>
-      <div class="view overlay">
-        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg"
-             alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Юнити</h4>
-        <p class="card-text">Курсы по шейдерам</p>
-        <button type="button" class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</button>
-      </div>
-    </div>
-    <div class="card mb-4">
-      <span class="badge badge-warning">Музыка</span>
-      <div class="view overlay">
-        <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg"
-             alt="Card image cap">
-        <a href="#!">
-          <div class="mask rgba-white-slight"></div>
-        </a>
-      </div>
-      <div class="card-body">
-        <h4 class="card-title">Яндекс музыка</h4>
-        <p class="card-text">Музыкальный сервис</p>
-        <button type="button" class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</button>
+  <div class="row row-cols-2 row-cols-md-3 row-cols-xl-3 row-cols-sm-1">
+    <div class="col mb-4" th:each="website: ${recentlyAdded}">
+      <div class="card h-100">
+        <span class="badge badge-warning" th:text="${website.category.name}"/>
+        <div class="view overlay h-30">
+          <img class="card-img-top h-100" th:src="${website.iconLink}">
+          <a th:href="${website.link}">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title" th:text="${website.name}"></h4>
+          <p class="card-text h-65" th:text="${website.description}"></p>
+          <a th:href="${website.link}" type="button"
+             class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</a>
+        </div>
       </div>
     </div>
   </div>
