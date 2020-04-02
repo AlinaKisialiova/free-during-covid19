@@ -2,12 +2,12 @@ package by.akisialiova.freedrngcovid19.dao;
 
 public enum Categories {
     EDUCATION("Образование"),
-    MUSIC("Музыка"),
     MOVIES("Кино"),
     BOOKS("Книги"),
+    GAMES("Игры"),
     BUSINESS("Бизнес"),
     HEALTH("Здоровье"),
-    SPORT("Спорт");
+    OTHER("Разное");
 
     private String name;
 
