@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head th:replace="fragments/head :: head"></head>
+<body>
+<div class="container">
+  <header th:replace="fragments/header :: header"></header>
+
+  <h2 class="font-weight-bold mb-4 pb-2" th:text="${category.name}"></h2>
+
+  <div class="row row-cols-2 row-cols-md-3 row-cols-xl-3 row-cols-sm-1">
+    <div class="col mb-4" th:each="website: ${websites}">
+      <div class="card h-100">
+        <span class="badge badge-warning" th:text="${website.category.name}"/>
+        <div class="view overlay h-35">
+          <img class="card-img-top h-100" th:src="${website.iconLink}">
+          <a th:href="${website.link}">
+            <div class="mask rgba-white-slight"></div>
+          </a>
+        </div>
+        <div class="card-body">
+          <h4 class="card-title" th:text="${website.name}"></h4>
+          <p class="card-text h-60" th:text="${website.description}"></p>
+          <a th:href="${website.link}" type="button"
+             class="btn btn-warning btn-rounded btn-md font-weight-bold">Перейти</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer th:replace="fragments/footer :: footer"></footer>
+</div>
+</body>
+</html>
