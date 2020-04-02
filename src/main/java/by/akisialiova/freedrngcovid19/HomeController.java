@@ -21,7 +21,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model) {
-        List<Website> recentlyAdded = repository.findByOrderByAddedDesc();
+        List<Website> recentlyAdded = repository.findTop9ByOrderByAddedDesc();
         model.addAttribute("recentlyAdded", recentlyAdded);
         model.addAttribute("categories", Categories.values());
         return "home";
@@ -29,7 +29,7 @@ public class HomeController {
 
     @GetMapping("/list")
     public String list(@RequestParam("category") Categories category, Model model) {
-        List<Website> list = repository.findByCategoryOrderByAddedDesc(category);
+        List<Website> list = repository.findTop50ByCategoryOrderByAddedDesc(category);
         model.addAttribute("websites", list);
         model.addAttribute("category", category);
         model.addAttribute("categories", Categories.values());

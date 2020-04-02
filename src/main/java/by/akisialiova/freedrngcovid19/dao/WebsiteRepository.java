@@ -6,7 +6,7 @@ import java.util.List;
 
 public interface WebsiteRepository extends MongoRepository<Website, Long> {
 
-    List<Website> findByOrderByAddedDesc();
+    List<Website> findTop9ByOrderByAddedDesc();
 
-    List<Website> findByCategoryOrderByAddedDesc(Categories category);
+    List<Website> findTop50ByCategoryOrderByAddedDesc(Categories category);
 }
