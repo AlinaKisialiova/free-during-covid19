@@ -38,7 +38,7 @@
     <div class="col mb-4" th:each="website: ${recentlyAdded}">
       <div class="card h-100">
         <span class="badge badge-warning" th:text="${website.category.name}"/>
-        <div class="view overlay h-30">
+        <div class="view overlay h-35">
           <img class="card-img-top h-100" th:src="${website.iconLink}">
           <a th:href="${website.link}">
             <div class="mask rgba-white-slight"></div>
