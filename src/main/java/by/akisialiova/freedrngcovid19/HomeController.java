@@ -1,8 +1,8 @@
 package by.akisialiova.freedrngcovid19;
 
+import by.akisialiova.freedrngcovid19.dao.Categories;
 import by.akisialiova.freedrngcovid19.dao.Website;
 import by.akisialiova.freedrngcovid19.dao.WebsiteRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,6 +22,7 @@ public class HomeController {
     public String home(Model model) {
         List<Website> recentlyAdded = repository.findAll();
         model.addAttribute("recentlyAdded", recentlyAdded);
+        model.addAttribute("categories", Categories.values());
         return "home";
     }
 }

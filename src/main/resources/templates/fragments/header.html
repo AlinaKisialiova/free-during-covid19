@@ -10,29 +10,8 @@
     <a class="navbar-brand text-uppercase" href="#">FREE DRNG COVID19</a>
 
     <ul class="navbar-nav mr-auto justify-content-center">
-      <li class="nav-item">
-        <a class="nav-link" href="#">ОБРАЗОВАНИЕ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">МУЗЫКА</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">КИНО</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">КНИГИ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">БИЗНЕС</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">ЗДОРОВЬЕ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">СПОРТ</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">ВСЁ СРАЗУ</a>
+      <li class="nav-item" th:each="c: ${categories}">
+        <a class="nav-link" href="#" th:text="${c.name}"></a>
       </li>
     </ul>
   </nav>
