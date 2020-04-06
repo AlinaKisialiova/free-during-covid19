@@ -5,3 +5,7 @@
 .h-60 {
     height: 60% !important;
 }
+
+.fb_iframe_widget span {
+    vertical-align: baseline !important;
+}
