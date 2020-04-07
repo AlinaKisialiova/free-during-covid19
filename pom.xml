@@ -21,8 +21,8 @@
     </issueManagement>
 
     <scm>
-        <url>https://github.com/AlinaKisialiova/free-during-covid19</url>
-        <connection>scm:git:git://github.com/AlinaKisialiova/free-during-covid19.git</connection>
+        <url>scm:git:git@github.com:AlinaKisialiova/free-during-covid19.git</url>
+        <connection>scm:git:git@github.com:AlinaKisialiova/free-during-covid19.git</connection>
         <developerConnection>scm:git:git@github.com:AlinaKisialiova/free-during-covid19.git</developerConnection>
     </scm>
 
