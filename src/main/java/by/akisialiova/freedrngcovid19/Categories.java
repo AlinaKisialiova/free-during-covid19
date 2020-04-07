@@ -1,4 +1,4 @@
-package by.akisialiova.freedrngcovid19.dao;
+package by.akisialiova.freedrngcovid19;
 
 public enum Categories {
     EDUCATION("Образование"),
@@ -7,6 +7,7 @@ public enum Categories {
     GAMES("Игры"),
     BUSINESS("Бизнес"),
     HEALTH("Здоровье"),
+    ONLINE_STAGE("Онлайн-сцена"),
     OTHER("Разное");
 
     private String name;

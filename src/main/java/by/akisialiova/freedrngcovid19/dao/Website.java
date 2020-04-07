@@ -1,5 +1,6 @@
 package by.akisialiova.freedrngcovid19.dao;
 
+import by.akisialiova.freedrngcovid19.Categories;
 import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;

@@ -1,5 +1,6 @@
 package by.akisialiova.freedrngcovid19.dao;
 
+import by.akisialiova.freedrngcovid19.Categories;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.mongodb.repository.MongoRepository;
 

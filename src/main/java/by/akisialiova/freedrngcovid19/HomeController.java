@@ -1,6 +1,5 @@
 package by.akisialiova.freedrngcovid19;
 
-import by.akisialiova.freedrngcovid19.dao.Categories;
 import by.akisialiova.freedrngcovid19.dao.Website;
 import by.akisialiova.freedrngcovid19.dao.WebsiteRepository;
 import org.springframework.stereotype.Controller;
