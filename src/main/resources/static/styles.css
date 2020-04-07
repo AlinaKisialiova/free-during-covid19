@@ -9,3 +9,12 @@
 .fb_iframe_widget span {
     vertical-align: baseline !important;
 }
+
+.belarus-wrw-gr {
+    background-image: url(/by_flag_custom.png);
+    width: 44px !important;
+}
+
+i.flag.belarus-wrw-gr:before, i.flag.belarus-wrw-gr:before {
+    background-position: 0 -858px
+}
