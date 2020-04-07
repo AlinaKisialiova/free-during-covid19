@@ -13,9 +13,31 @@
     <version>0.0.1-SNAPSHOT</version>
     <name>free-during-covid19</name>
     <description>Internet resources that are free during Covid19 pandemics</description>
+    <url>https://github.com/AlinaKisialiova/free-during-covid19</url>
+
+    <issueManagement>
+        <url>https://github.com/AlinaKisialiova/free-during-covid19/issues</url>
+        <system>GitHub Issues</system>
+    </issueManagement>
+
+    <scm>
+        <url>https://github.com/AlinaKisialiova/free-during-covid19</url>
+        <connection>scm:git:git://github.com/AlinaKisialiova/free-during-covid19.git</connection>
+        <developerConnection>scm:git:git@github.com:AlinaKisialiova/free-during-covid19.git</developerConnection>
+    </scm>
+
+    <developers>
+        <developer>
+            <email>aflamma@yandex.ru</email>
+            <name>Alina Kisialiova</name>
+            <url>https://github.com/AlinaKisialiova</url>
+            <id>AlinaKisialiova</id>
+        </developer>
+    </developers>
 
     <properties>
         <java.version>11</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
