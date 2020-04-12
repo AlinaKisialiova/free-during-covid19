@@ -18,7 +18,12 @@
           </a>
         </div>
         <div class="card-body d-flex flex-column">
-          <h4 class="card-title" th:text="${website.name}"></h4>
+          <p class="card-title">
+            <span class="h4" th:text="${website.name}"/>
+            <span th:if="${website.expired != null}" class="badge badge-warning float-right">до
+                <span th:text="${#temporals.format(website.expired, 'dd MMM yyyy')}"/>
+            </span>
+          </p>
           <p class="card-text h-60" th:text="${website.description}"></p>
           <a th:href="${website.link}" type="button"
              class="btn btn-warning btn-rounded btn-md font-weight-bold mt-auto" target="_blank">Перейти</a>
