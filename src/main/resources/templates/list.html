@@ -21,7 +21,7 @@
           <p class="card-title">
             <span class="h5" th:text="${website.name}"/>
             <span th:if="${website.expired != null}" class="badge badge-warning float-right">до
-                <span th:text="${#temporals.format(website.expired, 'dd MMM yyyy')}"/>
+                <span th:text="${#temporals.format(website.expired, 'dd.MM.yyyy')}"/>
             </span>
           </p>
           <p class="card-text h-60" th:text="${website.description}"></p>
