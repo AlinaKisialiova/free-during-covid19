@@ -8,6 +8,7 @@ public enum Categories {
     BUSINESS("Бизнес"),
     HEALTH("Здоровье"),
     ONLINE_STAGE("Онлайн-сцена"),
+    ONLINE_MUSEUM("Онлайн-музей"),
     OTHER("Разное");
 
     private String name;
