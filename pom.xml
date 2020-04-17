@@ -21,7 +21,7 @@
 
     <scm>
         <url>http://github.com/AlinaKisialiova/free-during-covid19</url>
-        <connection>scm:git:https://github.com/AlinaKisialiova/free-during-covid19.git</connection>  
+        <connection>scm:git:https://github.com/AlinaKisialiova/free-during-covid19.git</connection>
         <developerConnection>scm:git:https://github.com/AlinaKisialiova/free-during-covid19.git</developerConnection>
     </scm>
 
