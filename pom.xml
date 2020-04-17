@@ -9,7 +9,7 @@
     </parent>
     <groupId>by.akisialiova</groupId>
     <artifactId>freedrngcovid19</artifactId>
-    <version>1.0.1</version>
+    <version>1.0.1-SNAPSHOT</version>
     <name>free-during-covid19</name>
     <description>Internet resources that are free during Covid19 pandemics</description>
     <url>https://github.com/AlinaKisialiova/free-during-covid19</url>
