@@ -6,12 +6,16 @@
     height: 60% !important;
 }
 
+.w-15 {
+    width: 15% !important;
+}
+
 .fb_iframe_widget span {
     vertical-align: baseline !important;
 }
 
 .belarus-wrw-gr {
-    background-image: url(/by_flag_custom.png);
+    background-image: url(/static/img/by_flag_custom.png);
     width: 44px !important;
 }
 
