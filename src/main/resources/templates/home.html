@@ -8,13 +8,12 @@
   <div class="row">
     <div class="col-sm-12">
       <div class="jumbotron pb-2">
-        <h3 class="display-5">Привет, @username!</h3>
-        <p class="lead">На freeDuringCovid19.site ты найдешь десятки сервисов, которые открыли бесплатный доступ к своим
-          ресурсам из-за пандемии коронавируса <i class="fas fa-viruses"></i></p>
-        <p>Переживи пандемию с пользой или, как минимум, без скуки!</p>
+        <h3 class="display-5" th:text="#{greeting}"></h3>
+        <p class="lead"><span th:text="#{description.beginning}"></span><i class="fas fa-viruses"></i></p>
+        <p th:text="#{description.end}"></p>
         <hr class="my-3">
-        <p>Если знаешь ресурс, который стал бесплатным, но его нет в этом списке, напиши мне и я его добавлю. То же про ошибки и неполадки. </p>
-        <p class="font-weight-bold"> Почта: aflamma@yandex.com </p>
+        <p th:text="#{appeal}"></p>
+        <p class="font-weight-bold"> <span th:text="#{email}"></span>aflamma@yandex.com</p>
         <a class="btn-floating btn-fb" type="button" role="button" href="http://m.me/alinakisialiova" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a class="btn-floating btn-vk" type="button" role="button" href="https://vk.me/id110827031" target="_blank"><i class="fab fa-vk"></i></a>
         <a class="btn-floating btn-ins" type="button" role="button" href="https://www.instagram.com/blrirlbajki/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -24,7 +23,7 @@
             <div id="fb-root"></div>
               <div class="fb-share-button" data-href="http://freeduringcovid19.site" data-layout="button_count" data-size="small">
                 <a type="button" role="button" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Ffreeduringcovid19.site%2F&amp;src=sdkpreparse"
-                    class="fb-xfbml-parse-ignore">Поделиться</a>
+                    class="fb-xfbml-parse-ignore"></a>
               </div>
           </div>
           <div class="m-1">
@@ -41,7 +40,7 @@
   <div class="row">
     <div class="col-sm-12">
       <h4>
-        <span class="badge badge-warning">Недавно добавленные</span>
+        <span class="badge badge-warning" th:text="#{new}"></span>
       </h4>
       <p>
     </div>
@@ -60,13 +59,14 @@
         <div class="card-body d-flex flex-column">
             <p class="card-title">
               <span class="h5" th:text="${website.name}"/>
-              <span th:if="${website.expired != null}" class="badge badge-warning float-right">до
+              <span th:if="${website.expired != null}" class="badge badge-warning float-right">
+                <span th:text="#{until}"></span>
                 <span th:text="${#temporals.format(website.expired, 'dd.MM.yyyy')}"/>
               </span>
             </p>
           <p class="card-text" th:text="${website.description}"></p>
           <a th:href="${website.link}" type="button"
-             class="btn btn-warning btn-rounded btn-md font-weight-bold mt-auto" target="_blank">Перейти</a>
+             class="btn btn-warning btn-rounded btn-md font-weight-bold mt-auto" target="_blank" th:text="#{visit}"></a>
         </div>
       </div>
     </div>
