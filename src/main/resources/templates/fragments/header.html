@@ -29,7 +29,7 @@
         </a>
       </li>
       <li class="nav-item" th:each="c: ${categories}">
-        <a class="nav-link" th:href="@{/list(category=${c})}" th:text="${c.name}"></a>
+        <a class="nav-link" th:href="@{/list(category=${c.category})}" th:text="${c.name}"></a>
       </li>
       <li>
         <ul class="navbar-nav navbar-expand">

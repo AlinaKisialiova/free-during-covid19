@@ -1,4 +1,4 @@
-package by.akisialiova.freedrngcovid19;
+package by.akisialiova.freedrngcovid19.service;
 
 import org.springframework.cache.CacheManager;
 import org.springframework.scheduling.annotation.Scheduled;

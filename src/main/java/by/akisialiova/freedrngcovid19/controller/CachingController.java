@@ -1,6 +1,6 @@
 package by.akisialiova.freedrngcovid19.controller;
 
-import by.akisialiova.freedrngcovid19.CachingService;
+import by.akisialiova.freedrngcovid19.service.CachingService;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
