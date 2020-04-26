@@ -32,7 +32,7 @@
         <a class="nav-link" th:href="@{/list(category=${c.category})}" th:text="${c.name}"></a>
       </li>
       <li>
-        <ul class="navbar-nav navbar-expand">
+        <ul class="navbar-nav navbar-expand pl-lg-2">
           <li class="nav-item grow">
             <a class="nav-link px-0 py-lg-2 py-0"
                th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
