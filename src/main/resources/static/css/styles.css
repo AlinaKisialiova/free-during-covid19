@@ -26,3 +26,13 @@ i.flag.belarus-wrw-gr:before, i.flag.belarus-wrw-gr:before {
 .font-size-1-15 {
     font-size: 1.15rem !important;
 }
+
+@keyframes jump {
+    0%   {transform: translate(0,0) scale(1,1);}
+    50%  {transform: translate(0,-20%) scale(1,1.3);}
+    100% {transform: translate(0,20%) scale(1.3,1);}
+}
+.jump {
+    transform-origin: center;
+    animation: jump 0.5s linear alternate-reverse 25;
+}

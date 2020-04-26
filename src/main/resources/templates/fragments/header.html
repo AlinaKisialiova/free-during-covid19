@@ -40,7 +40,7 @@
               <i class="russia flag" title="Русский"></i>
             </a>
           </li>
-          <li class="nav-item">
+          <li class="nav-item jump">
             <a class="nav-link px-0 py-lg-2 py-0"
                th:with="urlBuilder=${T(org.springframework.web.servlet.support.ServletUriComponentsBuilder).fromCurrentRequest()}"
                th:href="${urlBuilder.replaceQueryParam('lang','by').toUriString()}">
