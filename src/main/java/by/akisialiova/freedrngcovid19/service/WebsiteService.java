@@ -31,7 +31,7 @@ public class WebsiteService {
 
     public List<WebsiteDto> findByCategory(Categories category, PageRequest pageRequest) {
         Locales locale = Locales.get(LocaleContextHolder.getLocale().getLanguage());
-        List<Website> websites = repository.findByCategory(category, pageRequest);
+        List<Website> websites = repository.findByCategory(category, locale, pageRequest);
         return convertToDto(websites, locale);
     }
 

@@ -13,10 +13,11 @@ import java.util.List;
 public interface WebsiteRepository extends MongoRepository<Website, Long> {
 
     @Query(value = "{ 'name.locale': ?0, 'description.locale': ?0, $or: [ { expired: { $gte: ISODate() } }, { expired: null } ] }",
-    fields = "{ name: { $elemMatch : { locale: ?0 }},  description: { $elemMatch : {locale: ?0 }}, link:1, category: 1, iconLink:1, expired:1 }")
+        fields = "{ name: { $elemMatch : { locale: ?0 }},  description: { $elemMatch : {locale: ?0 }}, link:1, category: 1, iconLink:1, expired:1 }")
     List<Website> findRecentlyAdded(Locales locale, Pageable pageable);
 
     @Cacheable("websites")
-    @Query(value = "{ category: ?0, $or: [ { expired: { $gte: ISODate() } }, { expired: null } ] }")
-    List<Website> findByCategory(Categories category, Pageable pageable);
+    @Query(value = "{ category: ?0, 'name.locale': ?1, 'description.locale': ?1, $or: [ { expired: { $gte: ISODate() } }, { expired: null } ] }",
+        fields = "{ name: { $elemMatch : { locale: ?1 }},  description: { $elemMatch : {locale: ?1 }}, link:1, category: 1, iconLink:1, expired:1 }")
+    List<Website> findByCategory(Categories category, Locales locales, Pageable pageable);
 }

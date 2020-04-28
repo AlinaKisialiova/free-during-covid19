@@ -10,7 +10,6 @@ import java.time.LocalDateTime;
 
 @Builder
 @Data
-@NoArgsConstructor
 public class WebsiteDto {
 
     @NonNull
