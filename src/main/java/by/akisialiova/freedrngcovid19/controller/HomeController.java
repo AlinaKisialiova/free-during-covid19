@@ -1,6 +1,7 @@
 package by.akisialiova.freedrngcovid19.controller;
 
 import by.akisialiova.freedrngcovid19.Categories;
+import by.akisialiova.freedrngcovid19.Locales;
 import by.akisialiova.freedrngcovid19.dto.CategoryDto;
 import by.akisialiova.freedrngcovid19.dto.WebsiteDto;
 import by.akisialiova.freedrngcovid19.service.WebsiteService;
@@ -24,21 +25,24 @@ public class HomeController {
     }
 
     @GetMapping("/")
-    public String home(Model model, Locale locale) {
-        List<WebsiteDto> recentlyAdded = websiteService.getLast9Added();
+    public String home(Model model, Locale requestLocale){
+        PageRequest pageRequest = PageRequest.of(0, 10, Sort.by(Sort.Direction.DESC, "added"));
+        List<WebsiteDto> recentlyAdded = websiteService.findRecentlyAdded(pageRequest);
         model.addAttribute("recentlyAdded", recentlyAdded);
-        model.addAttribute("categories", Categories.getLocalizedCategories(locale.getLanguage()));
+        Locales locale = Locales.get(requestLocale.getLanguage());
+        model.addAttribute("categories", Categories.getLocalizedValues(locale));
         return "home";
     }
 
     @GetMapping("/list")
-    public String list(@RequestParam("category") Categories category, Model model, Locale locale) {
+    public String list(@RequestParam("category") Categories category, Model model, Locale requestLocale) {
         PageRequest pageRequest = PageRequest.of(0, 50, Sort.by(Sort.Direction.DESC, "added"));
         List<WebsiteDto> list = websiteService.findByCategory(category, pageRequest);
         model.addAttribute("websites", list);
-        CategoryDto categoryDto = new CategoryDto(category, category.getLocalizedCategoryName(locale.getLanguage()));
+        Locales locale = Locales.get(requestLocale.getLanguage());
+        CategoryDto categoryDto = new CategoryDto(category, category.getLocalizedCategoryName(locale));
         model.addAttribute("category", categoryDto);
-        model.addAttribute("categories", Categories.getLocalizedCategories(locale.getLanguage()));
+        model.addAttribute("categories", Categories.getLocalizedValues(locale));
         return "list";
     }
 }

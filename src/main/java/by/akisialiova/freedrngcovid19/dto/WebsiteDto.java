@@ -1,5 +1,6 @@
 package by.akisialiova.freedrngcovid19.dto;
 
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.NonNull;
@@ -7,6 +8,7 @@ import lombok.NonNull;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+@Builder
 @Data
 @NoArgsConstructor
 public class WebsiteDto {
@@ -26,7 +28,6 @@ public class WebsiteDto {
     @NonNull
     private String iconLink;
 
-    @NonNull
     private LocalDateTime added;
 
     private LocalDate expired;

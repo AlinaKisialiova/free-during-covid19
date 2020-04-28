@@ -27,15 +27,15 @@ public enum Categories {
         this.byName = byName;
     }
 
-    public String getLocalizedCategoryName(String locale) {
-        if ("by".equals(locale)) {
+    public String getLocalizedCategoryName(Locales locale) {
+        if (Locales.BY.equals(locale)) {
              return byName;
         } else {
             return ruName;
         }
     }
 
-    public static List<CategoryDto> getLocalizedCategories(String locale){
+    public static List<CategoryDto> getLocalizedValues(Locales locale){
         return Arrays.stream(Categories.values())
             .map(c-> new CategoryDto(c, c.getLocalizedCategoryName(locale)))
             .collect(Collectors.toList());
