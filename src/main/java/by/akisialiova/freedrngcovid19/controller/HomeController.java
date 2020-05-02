@@ -26,7 +26,7 @@ public class HomeController {
 
     @GetMapping("/")
     public String home(Model model, Locale requestLocale){
-        PageRequest pageRequest = PageRequest.of(0, 10, Sort.by(Sort.Direction.DESC, "added"));
+        PageRequest pageRequest = PageRequest.of(0, 9, Sort.by(Sort.Direction.DESC, "added"));
         List<WebsiteDto> recentlyAdded = websiteService.findRecentlyAdded(pageRequest);
         model.addAttribute("recentlyAdded", recentlyAdded);
         Locales locale = Locales.get(requestLocale.getLanguage());
