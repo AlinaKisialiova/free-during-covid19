@@ -41,5 +41,5 @@ i.flag.belarus-wrw-gr:before, i.flag.belarus-wrw-gr:before {
 }
 .jump {
     transform-origin: center;
-    animation: jump 0.5s linear alternate-reverse 20;
+    animation: jump 0.5s linear alternate-reverse 15;
 }
