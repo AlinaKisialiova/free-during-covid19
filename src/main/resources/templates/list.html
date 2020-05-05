@@ -8,7 +8,7 @@
 
   <h2 class="font-weight-bold mb-4 pb-2" th:text="${category.name} + ' (' + ${#lists.size(websites)} + ')'"/>
 
-  <div class="row row-cols-2 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
     <div class="col mb-4" th:each="website: ${websites}">
       <div class="card h-100">
         <div class="view overlay h-35">
