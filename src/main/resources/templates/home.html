@@ -13,7 +13,7 @@
         <p th:text="#{description.end}"></p>
         <hr class="my-3">
         <p th:text="#{appeal}"></p>
-        <p class="font-weight-bold"> <span th:text="#{email}"></span>: aflamma@yandex.com</p>
+        <p class="font-weight-bold"> <span th:text="#{email}"></span>aflamma@yandex.com</p>
         <a class="btn-floating btn-fb" type="button" role="button" href="http://m.me/alinakisialiova" target="_blank"><i class="fab fa-facebook-f"></i></a>
         <a class="btn-floating btn-vk" type="button" role="button" href="https://vk.me/id110827031" target="_blank"><i class="fab fa-vk"></i></a>
         <a class="btn-floating btn-ins" type="button" role="button" href="https://www.instagram.com/blrirlbajki/" target="_blank"><i class="fab fa-instagram"></i></a>
@@ -46,7 +46,7 @@
     </div>
   </div>
 
-  <div class="row row-cols-2 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+  <div class="row row-cols-1 row-cols-xl-3 row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
     <div class="col mb-4" th:each="website: ${recentlyAdded}">
       <div class="card h-100">
         <span class="badge badge-warning" th:text="${website.category.name}"/>
