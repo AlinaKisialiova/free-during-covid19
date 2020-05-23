@@ -12,6 +12,8 @@ Take a look! => [freeDuringCovid19.site](https://freeduringcovid19.site/)
 
 [dev.by](https://dev.by/news/freeduringcovid19-site-belarus)
 
+[masheka.by](https://masheka.by/mogilevchane/5436-belarus-irlandija-5g-i-karantin-intervju-s-mogilevchankoj-alinoj-sozdavshej-onlajn-servis-dlja-rezhima-izoljacii.html)
+
 [nv-online.info](https://www.nv-online.info/2020/04/16/beloruska-sozdala-sajt-so-spiskom-besplatnyh-servisov-otkrytyh-na-vremya-pandemii.html)
 
 [minsknews.by](https://minsknews.by/dosug-v-period-pandemii-beloruska-sozdala-sajt-so-spiskom-servisov-kotorye-otkryli-dostup-k-svoim-resursam/)
