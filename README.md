@@ -4,7 +4,7 @@ The project is a web library with internet resources, software and mobile applic
 
 Users can navigate different categories (Education, Movies, Games, Business, ect) and read data in several languages (RU, BY).
 
-Take a look! => [freeDuringCovid19.site](https://freeduringcovid19.site/)
+Have a look! => [freeDuringCovid19.site](https://freeduringcovid19.site/) [DEACTIVATED]
 
 #### FreeDuringCovid19 in news
 
